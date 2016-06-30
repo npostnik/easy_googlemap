@@ -11,8 +11,10 @@ plugin.tx_easygooglemap {
 		# uncomment the following line to enable the new Property Mapper.
 		# rewrittenPropertyMapper = 1
 	}
-	
+
 	settings {
+		apiKey = {$plugin.tx_easygooglemap.configuration.apiKey}
+		apiLanguage = {$plugin.tx_easygooglemap.configuration.apiLanguage}
 		height = {$plugin.tx_easygooglemap.configuration.height}
 		width = {$plugin.tx_easygooglemap.configuration.width}
 		centerMapLatitude = {$plugin.tx_easygooglemap.configuration.centerMapLatitude}
@@ -27,12 +29,12 @@ plugin.tx_easygooglemap {
 
 # Include javascript files
 page {
-	includeJSFooter {	
+	includeJSFooter {
 		jquery = EXT:easy_googlemap/Resources/Public/jquery/{$plugin.tx_easygooglemap.jquery}
-	  	jquery {
-	  		forceOnTop = 1
-	  		if.isTrue = {$plugin.tx_easygooglemap.includeJquery}
-	  	}
+		jquery {
+			forceOnTop = 1
+			if.isTrue = {$plugin.tx_easygooglemap.includeJquery}
+		}
 	}
 }
 

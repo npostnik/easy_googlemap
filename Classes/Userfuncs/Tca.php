@@ -9,8 +9,13 @@ class Tca
 {
     public function coordinateResolver($PA, $fObj)
     {
+        $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['easy_googlemap']);
+        $apiKey = $extConf['apiKey'];
+        if (empty($apiKey)) {
+            return 'Please provide a default Google Maps API Key in extension settings. Get it <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">here</a>';
+        }
         $out [] = '<div id="map" style="height: 400px;"></div>';
-        $out [] = '<script src="//maps.google.com/maps/api/js?v=3&sensor=false&language=de-ch"></script>';
+        $out [] = '<script src="https://maps.googleapis.com/maps/api/js?key='.$apiKey.'&language=de-ch"></script>';
         $out [] = '<script type="text/javascript"' . ' src="' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath(easy_googlemap) . 'Resources/Public/jquery/addressMap.js">' . '</script>';
         $out [] = '<script type="text/javascript"' . ' src="' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath(easy_googlemap) . 'Resources/Public/jquery/addressMapConfig.js">' . '</script>';
         return implode('', $out);

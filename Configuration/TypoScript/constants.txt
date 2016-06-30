@@ -19,7 +19,7 @@ plugin.tx_easygooglemap {
 	}
 	persistence {
 		# cat=plugin.tx_easygooglemap/mapPersistence/010; type=string; label= Storage PID: PageId of page containing locations.
-		storagePid = 
+		storagePid =
 	}
 	configuration {
 		#cat=plugin.tx_easygooglemap/dims/010; type=string; label= Map height: String. The height of the map (e.g. 400px). Default: 350px.
@@ -27,11 +27,15 @@ plugin.tx_easygooglemap {
 		#cat=plugin.tx_easygooglemap/dims/010; type=string; label= Map width: String. The width of the map (e.g. 900px). Default: auto.
 		width = auto
 		#cat=plugin.tx_easygooglemap/file/a; type=string; label= External CSS file: String. Path to css file.
-		cssfile = 
+		cssfile =
+		#cat=plugin.tx_easygooglemap/mapSetup/a; type=string; label= Api Key: Google Maps Api Key - provide only, if different from default Google Maps Api Key
+		apiKey =
+		#cat=plugin.tx_easygooglemap/mapSetup/a; type=string; label= Language: Google Maps
+		apiLanguage =
 		#cat=plugin.tx_easygooglemap/mapSetup/a; type=string; label= Initial latitude: Decimal. Sets the initial latitude (e.g. 47.6464401).
-		centerMapLatitude = 
+		centerMapLatitude =
 		#cat=plugin.tx_easygooglemap/mapSetup/a; type=string; label= Initial longitude: Decimal. Sets the initial longitude (e.g. 8.175880).
-		centerMapLongitude = 
+		centerMapLongitude =
 		#cat=plugin.tx_easygooglemap/mapSetup/a; type=int+; label= Initial zoom: Integer [0 - 18]. Initial map zoom level. An integer value ranging from 0 (zoomed out) to 18 (zoomed in) inclusive. Default: 8.
 		zoom = 8
 		#cat=plugin.tx_easygooglemap/mapStyle/a; type=int; label= Saturation: Integer [-100 - 100]. Shifts the saturation of colors by a percentage of the original value if decreasing and a percentage of the remaining value if increasing. Default: -98.

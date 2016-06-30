@@ -293,7 +293,7 @@ function updateConfig(){
 					icon: image
 				});
 				var offsetImage = {
-					url: "/typo3conf/ext/easy_googlemap/Resources/Public/Icons/cross.png",
+					url: "../typo3conf/ext/easy_googlemap/Resources/Public/Icons/cross.png",
 					anchor: new google.maps.Point(8, 8)
 				}
 				offsetMarker = new google.maps.Marker({

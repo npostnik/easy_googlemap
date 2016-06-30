@@ -1,0 +1,2 @@
+# cat=basic/10; type=input; label=Google API key: default Google Maps API Key to use in Backend, get it here https://developers.google.com/maps/documentation/javascript/get-api-key
+apiKey =
